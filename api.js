@@ -24,7 +24,7 @@ class Api extends Facility {
   }
 
   getApi (name) {
-    return require(`${this.caller.ctx.root}/workers/api/${name}`)
+    return require(`${this.caller.ctx.root}/workers/loc.api/${name}`)
   }
 }
 
