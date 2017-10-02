@@ -1,0 +1,35 @@
+{
+  "name": "bfx-facs-api",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Bitfinex API Facility",
+  "author": {
+    "name": "prdn",
+    "email": "paolo@bitfinex.com"
+  },
+  "keywords": [
+    "bitfinex"
+  ],
+  "dependencies": {
+    "async": "^2.5.0",
+    "lodash": "^4.17.4"
+  },
+  "engine": {
+    "node": ">=8.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitfinexcom/bfx-facs-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bitfinexcom/bfx-facs-api/issues"
+  },
+  "homepage": "https://github.com/bitfinexcom/bfx-facs-api",
+  "maintainers": [
+    {
+      "name": "prdn",
+      "email": "paolo@bitfinex.com"
+    }
+  ]
+}
