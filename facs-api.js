@@ -1,8 +1,8 @@
 'use strict'
 
-const Facility = require('./base')
+const Base = require('bfx-facs-base')
 
-class Api extends Facility {
+class Api extends Base {
   constructor (caller, opts, ctx) {
     super(caller, opts, ctx)
 

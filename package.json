@@ -7,11 +7,13 @@
     "name": "prdn",
     "email": "paolo@bitfinex.com"
   },
+  "main": "index.js",
   "keywords": [
     "bitfinex"
   ],
   "dependencies": {
     "async": "^2.5.0",
+    "bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git",
     "lodash": "^4.17.4"
   },
   "engine": {
@@ -22,10 +24,6 @@
     "type": "git",
     "url": "git+https://github.com/bitfinexcom/bfx-facs-api.git"
   },
-  "bugs": {
-    "url": "https://github.com/bitfinexcom/bfx-facs-api/issues"
-  },
-  "homepage": "https://github.com/bitfinexcom/bfx-facs-api",
   "maintainers": [
     {
       "name": "prdn",
