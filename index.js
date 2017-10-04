@@ -1,7 +1,31 @@
 'use strict'
 
-const FacsApi = require('./facs-api.js')
+const Base = require('bfx-facs-base')
 
-module.exports = {
-  FacsApi
+class Api extends Base {
+  constructor (caller, opts, ctx) {
+    super(caller, opts, ctx)
+
+    this.name = 'api'
+
+    this.init()
+  }
+
+  init () {
+    super.init()
+
+    const ApiClass = this.getApi(this.opts.path)
+
+    this.api = new ApiClass({
+      getCtx: () => {
+        return this.caller.getPluginCtx(`api_${this.opts.label}`)
+      }
+    })
+  }
+
+  getApi (name) {
+    return require(`${this.caller.ctx.root}/workers/loc.api/${name}`)
+  }
 }
+
+module.exports = Api
