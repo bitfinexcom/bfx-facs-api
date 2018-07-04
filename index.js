@@ -24,7 +24,19 @@ class Api extends Base {
   }
 
   getApi (name) {
-    return require(`${this.caller.ctx.root}/workers/loc.api/${name}`)
+    const loc = `${this.caller.ctx.root}/workers/loc.api/${name}`
+
+    try {
+      return require(loc)
+    } catch (e) {
+      if (e.code === 'MODULE_NOT_FOUND') {
+        console.error(`[ERR] automatic worker lookup for location ${loc} failed.`)
+        console.error('[ERR] to fix, create the missing file.')
+        console.error('[ERR] for special use cases, you can also override `getApiConf`')
+      }
+
+      throw e
+    }
   }
 }
 
