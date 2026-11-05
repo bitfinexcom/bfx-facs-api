@@ -1,6 +1,6 @@
 {
   "name": "@bitfinex/bfx-facs-api",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": false,
   "description": "Bitfinex API Facility",
   "author": {
@@ -12,10 +12,18 @@
     "bitfinex"
   ],
   "dependencies": {
-    "@bitfinex/bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git"
+    "@bitfinex/bfx-facs-base": "git+https://github.com/bitfinexcom/bfx-facs-base.git#v2.0.0"
+  },
+  "devDependencies": {
+    "@bitfinex/lint-js": "^1.1.0"
+  },
+  "scripts": {
+    "lint": "bfx-lint-js",
+    "lint:fix": "bfx-lint-js --fix",
+    "test": "npm run lint"
   },
   "engines": {
-    "node": ">=16.0"
+    "node": ">=22.0"
   },
   "license": "Apache-2.0",
   "repository": {
