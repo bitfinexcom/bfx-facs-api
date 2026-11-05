@@ -19,7 +19,8 @@
   },
   "scripts": {
     "lint": "bfx-lint-js",
-    "lint:fix": "bfx-lint-js --fix"
+    "lint:fix": "bfx-lint-js --fix",
+    "test": "npm run lint"
   },
   "engines": {
     "node": ">=22.0"
